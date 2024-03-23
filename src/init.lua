@@ -37,7 +37,7 @@ local Library = {
 	DialogOpen = false,
 	UseAcrylic = false,
 	Acrylic = false,
-	Transparency = true,
+	Transparency = false,
 	MinimizeKeybind = nil,
 	MinimizeKey = Enum.KeyCode.LeftControl,
 
@@ -117,6 +117,7 @@ function Library:CreateWindow(Config)
 	Library.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
 	Library.UseAcrylic = Config.Acrylic or false
 	Library.Acrylic = Config.Acrylic or false
+	Library.Acrylic = Config.Transparency or false
 	Library.Theme = Config.Theme or "Dark"
 	if Config.Acrylic then
 		Acrylic.init()
